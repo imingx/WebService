@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://server" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://server" xmlns:intf="http://server" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://server" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="number" type="xsd:int"/>
+   <element name="studentQueryReturn" type="xsd:string"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="studentQueryResponse">
+
+      <wsdl:part element="impl:studentQueryReturn" name="studentQueryReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="studentQueryRequest">
+
+      <wsdl:part element="impl:number" name="number"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="StudentImpl">
+
+      <wsdl:operation name="studentQuery" parameterOrder="number">
+
+         <wsdl:input message="impl:studentQueryRequest" name="studentQueryRequest"/>
+
+         <wsdl:output message="impl:studentQueryResponse" name="studentQueryResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="StudentImplSoapBinding" type="impl:StudentImpl">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="studentQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="studentQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="studentQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="StudentImplService">
+
+      <wsdl:port binding="impl:StudentImplSoapBinding" name="StudentImpl">
+
+         <wsdlsoap:address location="http://localhost:8080//services/server/StudentImpl"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
