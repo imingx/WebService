@@ -7,6 +7,22 @@ import java.sql.SQLException;
 @WebService
 public class Student {
 
+    public boolean dropCourse(String []dropArg) {
+        String stu_id = dropArg[0];
+        String course_id = dropArg[1];
+        MySQL sql = new MySQL();
+
+        return sql.sql_dropCourse(stu_id, course_id);
+    }
+
+    public boolean changeStudentPassword(String []chanPassArg) {
+        String stu_id = chanPassArg[0];
+        String oldPassword = chanPassArg[1];
+        String newPassword = chanPassArg[2];
+        MySQL sql = new MySQL();
+        return sql.sql_changeStudentPassword(stu_id, oldPassword, newPassword);
+    }
+
     public boolean selectCourse(String []selcetArg) {
         String stu_id = selcetArg[0];
         String course_id = selcetArg[1];
@@ -80,18 +96,18 @@ public class Student {
             if (rs.next()) {
                 String pw = rs.getString("password");
                 if (!password.equals(pw)) {
-                    System.out.println("登陆失败");
+                    System.out.println("登录失败");
                     return false;
                 }
             } else {
-                System.out.println("登陆失败");
+                System.out.println("登录失败");
                 return false;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        System.out.println("登陆成功");
+        System.out.println("登录成功");
         return true;
     }
 

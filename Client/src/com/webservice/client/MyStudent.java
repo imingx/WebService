@@ -15,17 +15,21 @@ public class MyStudent {
         Student student = studentService.getStudent();
         int ins;
         while (true) {
-            System.out.println( this.id + " " + this.name + " 已登录，请选择：（1）退出，（2）查询已选课程，（3）查询所有课程，（4）选择课程，（5）退选课程，（6）修改密码");
+            System.out.println(this.id + " " + this.name + " 已登录，请选择：（1）退出，（2）查询已选课程，（3）查询所有课程，（4）选择课程，（5）退选课程，（6）修改密码");
             ins = sc.nextInt();
             if (ins == 1) {
                 break;
             } else if (ins == 2) {
-                String arg[] =   student.queryStudentCourse(this.id).substring(1).split(",");
-                for (int i = 0; i < arg.length; i += 2) {
-                    System.out.println("课程id:" + "" + arg[i] + "，课程名：" + arg[i + 1] );
+                if (student.queryStudentCourse(this.id).equals("")) {
+                    System.out.println("目前没选课程");
+                } else {
+                    String arg[] = student.queryStudentCourse(this.id).substring(1).split(",");
+                    for (int i = 0; i < arg.length; i += 2) {
+                        System.out.println("课程id:" + "" + arg[i] + "，课程名：" + arg[i + 1]);
+                    }
                 }
             } else if (ins == 3) {
-                String arg[] =   student.queryAllCourse(0x3f).substring(1).split(",");
+                String arg[] = student.queryAllCourse(0x3f).substring(1).split(",");
                 for (int i = 0; i < arg.length; i += 3) {
                     System.out.println("课程id:" + "" + arg[i] + "，课程名：" + arg[i + 1] + "，开课老师：" + arg[i + 2]);
                 }
@@ -43,8 +47,33 @@ public class MyStudent {
                 }
             } else if (ins == 5) {
                 System.out.println("请输入需要退选课程的编号：");
+                int course_id = sc.nextInt();
+
+                DropArg dropArg = new DropArg();
+                dropArg.getItem().add(this.id);
+                dropArg.getItem().add(course_id + "");
+
+                if (student.dropCourse(dropArg)) {
+                    System.out.println("退课成功！");
+                } else {
+                    System.out.println("退课失败，该课程不存在或没有选择该课程！");
+                }
+
             } else if (ins == 6) {
                 System.out.println("请输入原密码和新密码：");
+                String oldPassword = sc.next();
+                String newPassword = sc.next();
+
+                ChanPassArg chanPassArg = new ChanPassArg();
+                chanPassArg.getItem().add(this.id);
+                chanPassArg.getItem().add(oldPassword);
+                chanPassArg.getItem().add(newPassword);
+
+                if (student.changeStudentPassword(chanPassArg)) {
+                    System.out.println("修改密码成功！");
+                } else {
+                    System.out.println("初始密码错误，修改失败！");
+                }
             } else {
                 System.out.println("wrong");
             }
@@ -59,7 +88,7 @@ public class MyStudent {
         this.name = null;
         int ins;
         while (true) {
-            System.out.println("选择登陆、注册账号或退出：（1）登录账号，（2）查询所有账户信息，（3）注册账号，（4）退出，");
+            System.out.println("选择登录、注册账号或退出：（1）登录账号，（2）查询所有学生账户信息，（3）注册账号，（4）退出，");
             ins = sc.nextInt();
             if (ins == 4) {
                 break;
@@ -91,7 +120,7 @@ public class MyStudent {
                 arg.getItem().add(id);
                 arg.getItem().add(password);
                 if (!student.studentLogin(arg)) {
-                    System.out.println("密码错误，登录失败！");
+                    System.out.println("密码错误或不存在账号，登录失败！");
                 } else {
                     this.id = id;
                     this.name = student.getName(id);

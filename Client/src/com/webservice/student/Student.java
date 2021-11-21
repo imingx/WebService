@@ -25,15 +25,15 @@ public interface Student {
 
     /**
      * 
-     * @param studentId
+     * @param id
      * @return
      *     returns java.lang.String
      */
     @WebMethod
-    @WebResult(name = "queryStudentCourseReturn", targetNamespace = "http://server", partName = "queryStudentCourseReturn")
-    public String queryStudentCourse(
-        @WebParam(name = "student_id", targetNamespace = "http://server", partName = "student_id")
-        String studentId);
+    @WebResult(name = "getNameReturn", targetNamespace = "http://server", partName = "getNameReturn")
+    public String getName(
+        @WebParam(name = "id", targetNamespace = "http://server", partName = "id")
+        String id);
 
     /**
      * 
@@ -43,6 +43,18 @@ public interface Student {
     @WebMethod
     @WebResult(name = "studentQueryReturn", targetNamespace = "http://server", partName = "studentQueryReturn")
     public String studentQuery();
+
+    /**
+     * 
+     * @param logArg
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(name = "studentLoginReturn", targetNamespace = "http://server", partName = "studentLoginReturn")
+    public boolean studentLogin(
+        @WebParam(name = "logArg", targetNamespace = "http://server", partName = "logArg")
+        LogArg logArg);
 
     /**
      * 
@@ -70,6 +82,18 @@ public interface Student {
 
     /**
      * 
+     * @param dropArg
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(name = "dropCourseReturn", targetNamespace = "http://server", partName = "dropCourseReturn")
+    public boolean dropCourse(
+        @WebParam(name = "dropArg", targetNamespace = "http://server", partName = "dropArg")
+        DropArg dropArg);
+
+    /**
+     * 
      * @param nothing
      * @return
      *     returns java.lang.String
@@ -82,26 +106,26 @@ public interface Student {
 
     /**
      * 
-     * @param logArg
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(name = "studentLoginReturn", targetNamespace = "http://server", partName = "studentLoginReturn")
-    public boolean studentLogin(
-        @WebParam(name = "logArg", targetNamespace = "http://server", partName = "logArg")
-        LogArg logArg);
-
-    /**
-     * 
-     * @param id
+     * @param studentId
      * @return
      *     returns java.lang.String
      */
     @WebMethod
-    @WebResult(name = "getNameReturn", targetNamespace = "http://server", partName = "getNameReturn")
-    public String getName(
-        @WebParam(name = "id", targetNamespace = "http://server", partName = "id")
-        String id);
+    @WebResult(name = "queryStudentCourseReturn", targetNamespace = "http://server", partName = "queryStudentCourseReturn")
+    public String queryStudentCourse(
+        @WebParam(name = "student_id", targetNamespace = "http://server", partName = "student_id")
+        String studentId);
+
+    /**
+     * 
+     * @param chanPassArg
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(name = "changeStudentPasswordReturn", targetNamespace = "http://server", partName = "changeStudentPasswordReturn")
+    public boolean changeStudentPassword(
+        @WebParam(name = "chanPassArg", targetNamespace = "http://server", partName = "chanPassArg")
+        ChanPassArg chanPassArg);
 
 }

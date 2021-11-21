@@ -27,11 +27,13 @@ public class ObjectFactory {
     private final static QName _SelectCourseReturn_QNAME = new QName("http://server", "selectCourseReturn");
     private final static QName _Id_QNAME = new QName("http://server", "id");
     private final static QName _StudentQueryReturn_QNAME = new QName("http://server", "studentQueryReturn");
+    private final static QName _ChangeStudentPasswordReturn_QNAME = new QName("http://server", "changeStudentPasswordReturn");
     private final static QName _StudentId_QNAME = new QName("http://server", "student_id");
     private final static QName _StudentRegisterReturn_QNAME = new QName("http://server", "studentRegisterReturn");
     private final static QName _QueryAllCourseReturn_QNAME = new QName("http://server", "queryAllCourseReturn");
     private final static QName _Nothing_QNAME = new QName("http://server", "nothing");
     private final static QName _GetNameReturn_QNAME = new QName("http://server", "getNameReturn");
+    private final static QName _DropCourseReturn_QNAME = new QName("http://server", "dropCourseReturn");
     private final static QName _QueryStudentCourseReturn_QNAME = new QName("http://server", "queryStudentCourseReturn");
     private final static QName _StudentLoginReturn_QNAME = new QName("http://server", "studentLoginReturn");
 
@@ -43,11 +45,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegArg }
+     * Create an instance of {@link DropArg }
      * 
      */
-    public RegArg createRegArg() {
-        return new RegArg();
+    public DropArg createDropArg() {
+        return new DropArg();
     }
 
     /**
@@ -56,6 +58,22 @@ public class ObjectFactory {
      */
     public LogArg createLogArg() {
         return new LogArg();
+    }
+
+    /**
+     * Create an instance of {@link RegArg }
+     * 
+     */
+    public RegArg createRegArg() {
+        return new RegArg();
+    }
+
+    /**
+     * Create an instance of {@link ChanPassArg }
+     * 
+     */
+    public ChanPassArg createChanPassArg() {
+        return new ChanPassArg();
     }
 
     /**
@@ -91,6 +109,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://server", name = "studentQueryReturn")
     public JAXBElement<String> createStudentQueryReturn(String value) {
         return new JAXBElement<String>(_StudentQueryReturn_QNAME, String.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://server", name = "changeStudentPasswordReturn")
+    public JAXBElement<Boolean> createChangeStudentPasswordReturn(Boolean value) {
+        return new JAXBElement<Boolean>(_ChangeStudentPasswordReturn_QNAME, Boolean.class, null, value);
     }
 
     /**
@@ -136,6 +163,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://server", name = "getNameReturn")
     public JAXBElement<String> createGetNameReturn(String value) {
         return new JAXBElement<String>(_GetNameReturn_QNAME, String.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://server", name = "dropCourseReturn")
+    public JAXBElement<Boolean> createDropCourseReturn(Boolean value) {
+        return new JAXBElement<Boolean>(_DropCourseReturn_QNAME, Boolean.class, null, value);
     }
 
     /**

@@ -8,6 +8,14 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <element name="getNameReturn" type="xsd:string"/>
    <element name="student_id" type="xsd:string"/>
    <element name="queryStudentCourseReturn" type="xsd:string"/>
+   <element name="chanPassArg">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="changeStudentPasswordReturn" type="xsd:boolean"/>
    <element name="nothing" type="xsd:int"/>
    <element name="queryAllCourseReturn" type="xsd:string"/>
    <element name="logArg">
@@ -18,6 +26,22 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     </complexType>
    </element>
    <element name="studentLoginReturn" type="xsd:boolean"/>
+   <element name="dropArg">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="dropCourseReturn" type="xsd:boolean"/>
+   <element name="selcetArg">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="selectCourseReturn" type="xsd:boolean"/>
    <element name="studentQueryReturn" type="xsd:string"/>
    <element name="regArg">
     <complexType>
@@ -30,27 +54,15 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
   </schema>
  </wsdl:types>
 
-   <wsdl:message name="getNameRequest">
-
-      <wsdl:part element="impl:id" name="id"/>
-
-   </wsdl:message>
-
-   <wsdl:message name="queryAllCourseResponse">
-
-      <wsdl:part element="impl:queryAllCourseReturn" name="queryAllCourseReturn"/>
-
-   </wsdl:message>
-
    <wsdl:message name="studentQueryResponse">
 
       <wsdl:part element="impl:studentQueryReturn" name="studentQueryReturn"/>
 
    </wsdl:message>
 
-   <wsdl:message name="queryAllCourseRequest">
+   <wsdl:message name="changeStudentPasswordRequest">
 
-      <wsdl:part element="impl:nothing" name="nothing"/>
+      <wsdl:part element="impl:chanPassArg" name="chanPassArg"/>
 
    </wsdl:message>
 
@@ -84,6 +96,12 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
+   <wsdl:message name="dropCourseRequest">
+
+      <wsdl:part element="impl:dropArg" name="dropArg"/>
+
+   </wsdl:message>
+
    <wsdl:message name="studentLoginResponse">
 
       <wsdl:part element="impl:studentLoginReturn" name="studentLoginReturn"/>
@@ -97,6 +115,48 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <wsdl:message name="queryStudentCourseRequest">
 
       <wsdl:part element="impl:student_id" name="student_id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNameRequest">
+
+      <wsdl:part element="impl:id" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryAllCourseResponse">
+
+      <wsdl:part element="impl:queryAllCourseReturn" name="queryAllCourseReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryAllCourseRequest">
+
+      <wsdl:part element="impl:nothing" name="nothing"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="dropCourseResponse">
+
+      <wsdl:part element="impl:dropCourseReturn" name="dropCourseReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="selectCourseResponse">
+
+      <wsdl:part element="impl:selectCourseReturn" name="selectCourseReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="selectCourseRequest">
+
+      <wsdl:part element="impl:selcetArg" name="selcetArg"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="changeStudentPasswordResponse">
+
+      <wsdl:part element="impl:changeStudentPasswordReturn" name="changeStudentPasswordReturn"/>
 
    </wsdl:message>
 
@@ -118,6 +178,14 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="changeStudentPassword" parameterOrder="chanPassArg">
+
+         <wsdl:input message="impl:changeStudentPasswordRequest" name="changeStudentPasswordRequest"/>
+
+         <wsdl:output message="impl:changeStudentPasswordResponse" name="changeStudentPasswordResponse"/>
+
+      </wsdl:operation>
+
       <wsdl:operation name="queryAllCourse" parameterOrder="nothing">
 
          <wsdl:input message="impl:queryAllCourseRequest" name="queryAllCourseRequest"/>
@@ -131,6 +199,22 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          <wsdl:input message="impl:studentLoginRequest" name="studentLoginRequest"/>
 
          <wsdl:output message="impl:studentLoginResponse" name="studentLoginResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="dropCourse" parameterOrder="dropArg">
+
+         <wsdl:input message="impl:dropCourseRequest" name="dropCourseRequest"/>
+
+         <wsdl:output message="impl:dropCourseResponse" name="dropCourseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="selectCourse" parameterOrder="selcetArg">
+
+         <wsdl:input message="impl:selectCourseRequest" name="selectCourseRequest"/>
+
+         <wsdl:output message="impl:selectCourseResponse" name="selectCourseResponse"/>
 
       </wsdl:operation>
 
@@ -192,6 +276,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="changeStudentPassword">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="changeStudentPasswordRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="changeStudentPasswordResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="queryAllCourse">
 
          <wsdlsoap:operation soapAction=""/>
@@ -221,6 +323,42 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="studentLoginResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="dropCourse">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="dropCourseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="dropCourseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="selectCourse">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="selectCourseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="selectCourseResponse">
 
             <wsdlsoap:body use="literal"/>
 

@@ -20,6 +20,8 @@ public class Client {
                 stu.run();
                 System.out.println("您已成功退出学生界面！");
             } else if (ins == 1) {
+                MyTeacher tea = new MyTeacher();
+                tea.run();
                 System.out.println("您已成功退出老师界面！");
             } else if(ins == 3){
                 System.out.println("成功结束程序！");
