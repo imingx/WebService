@@ -44,7 +44,7 @@ WebService
 'HOST': 'rm-2zeu3f7e1n5yt10v0co.mysql.rds.aliyuncs.com',
 'NAME': 'xml',
 'USER': 'root',
-'PASSWORD': 'myja&*$4X579cKr',
+'PASSWORD': '*',
 'PORT': '3306'
 ```
 
