@@ -91,64 +91,6 @@ public class MyTeacher {
                 System.out.println("error");
             }
         }
-//            System.out.println( this.id + " " + this.name + " 已登录，请选择：（1）退出，（2）查询已选课程，（3）查询所有课程，（4）选择课程，（5）退选课程，（6）修改密码");
-//            ins = sc.nextInt();
-//            if (ins == 1) {
-//                break;
-//            } else if (ins == 2) {
-//                String arg[] =   student.queryStudentCourse(this.id).substring(1).split(",");
-//                for (int i = 0; i < arg.length; i += 2) {
-//                    System.out.println("课程id:" + "" + arg[i] + "，课程名：" + arg[i + 1] );
-//                }
-//            } else if (ins == 3) {
-//                String arg[] =   student.queryAllCourse(0x3f).substring(1).split(",");
-//                for (int i = 0; i < arg.length; i += 3) {
-//                    System.out.println("课程id:" + "" + arg[i] + "，课程名：" + arg[i + 1] + "，开课老师：" + arg[i + 2]);
-//                }
-//            } else if (ins == 4) {
-//                System.out.println("请输入选择的课程编号：");
-//                int course_id = sc.nextInt();
-//
-//                SelcetArg selcetArg = new SelcetArg();
-//                selcetArg.getItem().add(this.id);
-//                selcetArg.getItem().add(course_id + "");
-//                if (student.selectCourse(selcetArg)) {
-//                    System.out.println("选课成功！");
-//                } else {
-//                    System.out.println("已经选了这门课或者这门课不存在，选课失败！");
-//                }
-//            } else if (ins == 5) {
-//                System.out.println("请输入需要退选课程的编号：");
-//                int course_id = sc.nextInt();
-//
-//                DropArg dropArg = new DropArg();
-//                dropArg.getItem().add(this.id);
-//                dropArg.getItem().add(course_id + "");
-//
-//                if (student.dropCourse(dropArg)) {
-//                    System.out.println("退课成功！");
-//                } else {
-//                    System.out.println("退课失败，该课程不存在或没有选择该课程！");
-//                }
-//
-//            } else if (ins == 6) {
-//                System.out.println("请输入原密码和新密码：");
-//                String oldPassword = sc.next();
-//                String newPassword = sc.next();
-//
-//                ChanPassArg chanPassArg = new ChanPassArg();
-//                chanPassArg.getItem().add(this.id);
-//                chanPassArg.getItem().add(oldPassword);
-//                chanPassArg.getItem().add(newPassword);
-//
-//                if (student.changeStudentPassword(chanPassArg)) {
-//                    System.out.println("修改密码成功！");
-//                } else {
-//                    System.out.println("初始密码错误，修改失败！");
-//                }
-//            } else {
-//                System.out.println("wrong");
-//            }
     }
 
     public void run() {

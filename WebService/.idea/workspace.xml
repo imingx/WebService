@@ -7,33 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e4f8cbe-b3ee-41b5-a94d-0ee88f07608b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/com/webservice/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/com/webservice/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/com/webservice/client/MyStudent.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/com/webservice/client/MyStudent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/com/webservice/client/MyTeacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/com/webservice/client/MyTeacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/com/webservice/student/ObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/com/webservice/student/ObjectFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/com/webservice/student/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/com/webservice/student/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/com/webservice/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/webservice/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/com/webservice/client/MyStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/webservice/client/MyStudent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/com/webservice/client/MyTeacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/webservice/client/MyTeacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/com/webservice/student/ObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/webservice/student/ObjectFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/com/webservice/student/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/webservice/student/ObjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/com/webservice/student/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/webservice/student/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/com/webservice/student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/com/webservice/student/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/wbFinal_war_exploded/WEB-INF/classes/server/MySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/wbFinal_war_exploded/WEB-INF/classes/server/MySQL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/wbFinal_war_exploded/WEB-INF/classes/server/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/wbFinal_war_exploded/WEB-INF/classes/server/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/wbFinal_war_exploded/WEB-INF/classes/server/Student.wsdl" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/wbFinal_war_exploded/WEB-INF/classes/server/Student.wsdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/wbFinal_war_exploded/WEB-INF/classes/server/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/wbFinal_war_exploded/WEB-INF/classes/server/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wsFinal/server/MySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wsFinal/server/MySQL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wsFinal/server/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wsFinal/server/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wsFinal/server/Student.wsdl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wsFinal/server/Student.wsdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wsFinal/server/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wsFinal/server/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/MySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/MySQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Student.wsdl" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Student.wsdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Teacher.wsdl" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Teacher.wsdl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,44 +19,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/server/Student.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="280">
-                    <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/server/MySQL.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="560">
-                    <caret line="28" selection-start-line="28" selection-end-line="28" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/HelloWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+            <state relative-caret-position="140">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#92#93#0" expanded="true" />
                 <element signature="e#117#118#0" expanded="true" />
@@ -97,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/Teacher.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
@@ -112,6 +58,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/Teacher.wsdl">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/server/MySQL.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-40">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -176,8 +131,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-1440" />
-    <option name="width" value="1137" />
-    <option name="height" value="1395" />
+    <option name="width" value="1434" />
+    <option name="height" value="1345" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -191,6 +146,11 @@
             <path>
               <item name="wbFinal" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wbFinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebService" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wbFinal" type="b2602c69:ProjectViewProjectNode" />
@@ -218,9 +178,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1637487197867" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1637491139145" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-8.0.27.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -419,12 +379,12 @@
       <workItem from="1637427080449" duration="4349000" />
       <workItem from="1637431728886" duration="2898000" />
       <workItem from="1637434653519" duration="10000" />
-      <workItem from="1637434671400" duration="25412000" />
+      <workItem from="1637434671400" duration="27645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34112000" />
+    <option name="totallyTimeSpent" value="36345000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -436,10 +396,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-1440" width="1010" height="1240" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-1440" width="1274" height="1195" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23634453" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24835527" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -450,12 +409,12 @@
       <window_info anchor="bottom" id="Duplicate detector" sideWeight="0.49908593" weight="0.32971996" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4996997" weight="0.32788944" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.83638024" visible="true" weight="0.32971996" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.83638024" weight="0.34369114" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.64421856" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49876544" weight="0.32881662" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49876544" weight="0.28906956" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49876544" visible="true" weight="0.27306968" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5009141" side_tool="true" weight="0.32971996" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49725777" weight="0.2303523" />
@@ -694,26 +653,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/HelloWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding>
-            <element signature="e#92#93#0" expanded="true" />
-            <element signature="e#117#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/Student.wsdl">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/HelloWorld.wsdl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1096">
-          <caret line="63" column="59" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.27.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -742,13 +683,6 @@
     <entry file="file://$PROJECT_DIR$/src/server/Teacher.wsdl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/MySQL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/Teacher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -756,6 +690,31 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/HelloWorld.wsdl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1096">
+          <caret line="63" column="59" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#92#93#0" expanded="true" />
+            <element signature="e#117#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/MySQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
         </state>
       </provider>
     </entry>
