@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://server" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://server" xmlns:intf="http://server" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://server" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="id" type="xsd:string"/>
+   <element name="getNameReturn" type="xsd:string"/>
+   <element name="student_id" type="xsd:string"/>
+   <element name="queryStudentCourseReturn" type="xsd:string"/>
+   <element name="nothing" type="xsd:int"/>
+   <element name="queryAllCourseReturn" type="xsd:string"/>
+   <element name="logArg">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="studentLoginReturn" type="xsd:boolean"/>
+   <element name="studentQueryReturn" type="xsd:string"/>
+   <element name="regArg">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="studentRegisterReturn" type="xsd:boolean"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getNameRequest">
+
+      <wsdl:part element="impl:id" name="id"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryAllCourseResponse">
+
+      <wsdl:part element="impl:queryAllCourseReturn" name="queryAllCourseReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="studentQueryResponse">
+
+      <wsdl:part element="impl:studentQueryReturn" name="studentQueryReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryAllCourseRequest">
+
+      <wsdl:part element="impl:nothing" name="nothing"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryStudentCourseResponse">
+
+      <wsdl:part element="impl:queryStudentCourseReturn" name="queryStudentCourseReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="studentLoginRequest">
+
+      <wsdl:part element="impl:logArg" name="logArg"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="studentRegisterRequest">
+
+      <wsdl:part element="impl:regArg" name="regArg"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="studentRegisterResponse">
+
+      <wsdl:part element="impl:studentRegisterReturn" name="studentRegisterReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNameResponse">
+
+      <wsdl:part element="impl:getNameReturn" name="getNameReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="studentLoginResponse">
+
+      <wsdl:part element="impl:studentLoginReturn" name="studentLoginReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="studentQueryRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="queryStudentCourseRequest">
+
+      <wsdl:part element="impl:student_id" name="student_id"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Student">
+
+      <wsdl:operation name="getName" parameterOrder="id">
+
+         <wsdl:input message="impl:getNameRequest" name="getNameRequest"/>
+
+         <wsdl:output message="impl:getNameResponse" name="getNameResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="queryStudentCourse" parameterOrder="student_id">
+
+         <wsdl:input message="impl:queryStudentCourseRequest" name="queryStudentCourseRequest"/>
+
+         <wsdl:output message="impl:queryStudentCourseResponse" name="queryStudentCourseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="queryAllCourse" parameterOrder="nothing">
+
+         <wsdl:input message="impl:queryAllCourseRequest" name="queryAllCourseRequest"/>
+
+         <wsdl:output message="impl:queryAllCourseResponse" name="queryAllCourseResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="studentLogin" parameterOrder="logArg">
+
+         <wsdl:input message="impl:studentLoginRequest" name="studentLoginRequest"/>
+
+         <wsdl:output message="impl:studentLoginResponse" name="studentLoginResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="studentQuery">
+
+         <wsdl:input message="impl:studentQueryRequest" name="studentQueryRequest"/>
+
+         <wsdl:output message="impl:studentQueryResponse" name="studentQueryResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="studentRegister" parameterOrder="regArg">
+
+         <wsdl:input message="impl:studentRegisterRequest" name="studentRegisterRequest"/>
+
+         <wsdl:output message="impl:studentRegisterResponse" name="studentRegisterResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="StudentSoapBinding" type="impl:Student">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="queryStudentCourse">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="queryStudentCourseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="queryStudentCourseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="queryAllCourse">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="queryAllCourseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="queryAllCourseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="studentLogin">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="studentLoginRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="studentLoginResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="studentQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="studentQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="studentQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="studentRegister">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="studentRegisterRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="studentRegisterResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="StudentService">
+
+      <wsdl:port binding="impl:StudentSoapBinding" name="Student">
+
+         <wsdlsoap:address location="http://localhost:8080//services/server/Student"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

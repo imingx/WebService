@@ -1,32 +1,14 @@
 package server;
 
 public class Test {
-    public double add(double a, double b) {
-        return a + b;
-    }
-
-    public double minus(double a, double b) {
-        return a - b;
-    }
-
-    public double multiply(double a, double b) {
-        return a * b;
-    }
-
-    public double divide(double a, double b) {
-        return a / b;
-    }
-
-    public double power(double a) {
-        return a*a;
-    }
-
-    public double sqrt(double a) {
-        if (a < 0) {
-            System.out.println("开方数要大于0");
-            return 0;
-        } else {
-            return Math.sqrt(a);
-        }
+    public static void main(String[] args) {
+        Student s = new Student();
+//        s.selectCourse("");
+//        Teacher t = new Teacher();
+//        String[] tt = t.teacherQuery().substring(1).split(",");
+//        for (int i = 0; i < tt.length; ++i)
+//        {
+//            System.out.println(tt[i]);
+//        }
     }
 }

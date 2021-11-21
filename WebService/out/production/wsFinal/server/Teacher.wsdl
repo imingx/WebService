@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://server" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://server" xmlns:intf="http://server" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://server" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="id" type="xsd:string"/>
+   <element name="password" type="xsd:string"/>
+   <element name="name" type="xsd:string"/>
+   <element name="teacherRegisterReturn" type="xsd:boolean"/>
+   <element name="teacherQueryReturn" type="xsd:string"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="teacherRegisterResponse">
+
+      <wsdl:part element="impl:teacherRegisterReturn" name="teacherRegisterReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="teacherQueryResponse">
+
+      <wsdl:part element="impl:teacherQueryReturn" name="teacherQueryReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="teacherRegisterRequest">
+
+      <wsdl:part element="impl:id" name="id"/>
+
+      <wsdl:part element="impl:password" name="password"/>
+
+      <wsdl:part element="impl:name" name="name"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="teacherQueryRequest">
+
+   </wsdl:message>
+
+   <wsdl:portType name="Teacher">
+
+      <wsdl:operation name="teacherRegister" parameterOrder="id password name">
+
+         <wsdl:input message="impl:teacherRegisterRequest" name="teacherRegisterRequest"/>
+
+         <wsdl:output message="impl:teacherRegisterResponse" name="teacherRegisterResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="teacherQuery">
+
+         <wsdl:input message="impl:teacherQueryRequest" name="teacherQueryRequest"/>
+
+         <wsdl:output message="impl:teacherQueryResponse" name="teacherQueryResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="TeacherSoapBinding" type="impl:Teacher">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="teacherRegister">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="teacherRegisterRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="teacherRegisterResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="teacherQuery">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="teacherQueryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="teacherQueryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="TeacherService">
+
+      <wsdl:port binding="impl:TeacherSoapBinding" name="Teacher">
+
+         <wsdlsoap:address location="http://localhost:8080//services/server/Teacher"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

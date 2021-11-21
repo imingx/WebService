@@ -9,6 +9,7 @@
       <root url="jar://$PROJECT_DIR$/lib/commons-discovery-0.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/wsdl4j-1.5.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/axis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.27.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

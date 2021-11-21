@@ -46,15 +46,16 @@
         <parameter name="scope" value="Application"/>
         <namespace>http://server</namespace>
     </service>
-  <service name="Test" provider="java:RPC" style="document" use="literal">
-    <parameter name="className" value="server.Test"/>
-    <parameter name="allowedMethods" value="*"/>
-    <parameter name="scope" value="Application"/>
-    <namespace>http://server</namespace>
-  </service>
 
-  <service name="StudentImpl" provider="java:RPC" style="document" use="literal">
-    <parameter name="className" value="server.StudentImpl"/>
+    <service name="Teacher" provider="java:RPC" style="document" use="literal">
+        <parameter name="className" value="server.Teacher"/>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="scope" value="Application"/>
+        <namespace>http://server</namespace>
+    </service>
+
+  <service name="Student" provider="java:RPC" style="document" use="literal">
+    <parameter name="className" value="server.Student"/>
     <parameter name="allowedMethods" value="*"/>
     <parameter name="scope" value="Application"/>
     <namespace>http://server</namespace>
