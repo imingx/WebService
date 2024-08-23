@@ -60,11 +60,11 @@ WebService
 
 发布服务：
 
-![image-20211121190240824](https://gitee.com/imingx/picgo/raw/master/2021/20211121190240.png)
+![image-20211121190240824](https://gitlab.com/imingx/picgo/raw/master/2021/20211121190240.png)
 
 运行截图：
 
-![image-20211121184815295](https://gitee.com/imingx/picgo/raw/master/2021/20211121184822.png)
+![image-20211121184815295](https://gitlab.com/imingx/picgo/raw/master/2021/20211121184822.png)
 
 #### 以下是教师的操作过程：
 
